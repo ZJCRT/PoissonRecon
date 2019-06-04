@@ -32,8 +32,8 @@ LFLAGS_DEBUG =
 
 #CFLAGS_RELEASE = -O3 -DRELEASE -funroll-loops -ffast-math -g
 #LFLAGS_RELEASE = -O3 -g
-CFLAGS_RELEASE = -O3 -DRELEASE -funroll-loops -ffast-math -g
-LFLAGS_RELEASE = -O3 -g
+CFLAGS_RELEASE = -O2 -DRELEASE
+LFLAGS_RELEASE = -O2
 
 SRC = Src/
 BIN = Bin/Linux/
@@ -72,51 +72,51 @@ all: $(BIN)$(IS_TARGET)
 all: $(BIN)$(AV_TARGET)
 all: $(BIN)$(CP_TARGET)
 
-debug: CFLAGS += $(CFLAGS_DEBUG)
-debug: LFLAGS += $(LFLAGS_DEBUG)
-debug: make_dir
-debug: $(BIN)$(PR_TARGET)
-debug: $(BIN)$(SR_TARGET)
-debug: $(BIN)$(ST_TARGET)
-debug: $(BIN)$(EH_TARGET)
-debug: $(BIN)$(IS_TARGET)
-debug: $(BIN)$(AV_TARGET)
-debug: $(BIN)$(CP_TARGET)
+#debug: CFLAGS += $(CFLAGS_DEBUG)
+#debug: LFLAGS += $(LFLAGS_DEBUG)
+#debug: make_dir
+#debug: $(BIN)$(PR_TARGET)
+#debug: $(BIN)$(SR_TARGET)
+#debug: $(BIN)$(ST_TARGET)
+#debug: $(BIN)$(EH_TARGET)
+#debug: $(BIN)$(IS_TARGET)
+#debug: $(BIN)$(AV_TARGET)
+#debug: $(BIN)$(CP_TARGET)
 
 poissonrecon: CFLAGS += $(CFLAGS_RELEASE)
 poissonrecon: LFLAGS += $(LFLAGS_RELEASE)
 poissonrecon: make_dir
 poissonrecon: $(BIN)$(PR_TARGET)
 
-ssdrecon: CFLAGS += $(CFLAGS_RELEASE)
-ssdrecon: LFLAGS += $(LFLAGS_RELEASE)
-ssdrecon: make_dir
-ssdrecon: $(BIN)$(SR_TARGET)
+#ssdrecon: CFLAGS += $(CFLAGS_RELEASE)
+#ssdrecon: LFLAGS += $(LFLAGS_RELEASE)
+#ssdrecon: make_dir
+#ssdrecon: $(BIN)$(SR_TARGET)
 
-surfacetrimmer: CFLAGS += $(CFLAGS_RELEASE)
-surfacetrimmer: LFLAGS += $(LFLAGS_RELEASE)
-surfacetrimmer: make_dir
-surfacetrimmer: $(BIN)$(ST_TARGET)
+#surfacetrimmer: CFLAGS += $(CFLAGS_RELEASE)
+#surfacetrimmer: LFLAGS += $(LFLAGS_RELEASE)
+#surfacetrimmer: make_dir
+#surfacetrimmer: $(BIN)$(ST_TARGET)
 
-edtinheat: CFLAGS += $(CFLAGS_RELEASE)
-edtinheat: LFLAGS += $(LFLAGS_RELEASE)
-edtinheat: make_dir
-edtinheat: $(BIN)$(EH_TARGET)
+#edtinheat: CFLAGS += $(CFLAGS_RELEASE)
+#edtinheat: LFLAGS += $(LFLAGS_RELEASE)
+#edtinheat: make_dir
+#edtinheat: $(BIN)$(EH_TARGET)
 
-imagestitching: CFLAGS += $(CFLAGS_RELEASE)
-imagestitching: LFLAGS += $(LFLAGS_RELEASE)
-imagestitching: make_dir
-imagestitching: $(BIN)$(IS_TARGET)
+#imagestitching: CFLAGS += $(CFLAGS_RELEASE)
+#imagestitching: LFLAGS += $(LFLAGS_RELEASE)
+#imagestitching: make_dir
+#imagestitching: $(BIN)$(IS_TARGET)
 
-octreevisualization: CFLAGS += $(CFLAGS_RELEASE)
-octreevisualization: LFLAGS += $(LFLAGS_RELEASE)
-octreevisualization: make_dir
-octreevisualization: $(BIN)$(AV_TARGET)
+#octreevisualization: CFLAGS += $(CFLAGS_RELEASE)
+#octreevisualization: LFLAGS += $(LFLAGS_RELEASE)
+#octreevisualization: make_dir
+#octreevisualization: $(BIN)$(AV_TARGET)
 
-chunkply: CFLAGS += $(CFLAGS_RELEASE)
-chunkply: LFLAGS += $(LFLAGS_RELEASE)
-chunkply: make_dir
-chunkply: $(BIN)$(CP_TARGET)
+#chunkply: CFLAGS += $(CFLAGS_RELEASE)
+#chunkply: LFLAGS += $(LFLAGS_RELEASE)
+#chunkply: make_dir
+#chunkply: $(BIN)$(CP_TARGET)
 
 clean:
 	rm -rf $(BIN)$(PR_TARGET)
