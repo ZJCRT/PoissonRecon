@@ -1,17 +1,17 @@
 PR_TARGET=PoissonRecon
-SR_TARGET=SSDRecon
-ST_TARGET=SurfaceTrimmer
-EH_TARGET=EDTInHeat
-IS_TARGET=ImageStitching
-AV_TARGET=AdaptiveTreeVisualization
-CP_TARGET=ChunkPLY
+#SR_TARGET=SSDRecon
+#ST_TARGET=SurfaceTrimmer
+#EH_TARGET=EDTInHeat
+#IS_TARGET=ImageStitching
+#AV_TARGET=AdaptiveTreeVisualization
+#CP_TARGET=ChunkPLY
 PR_SOURCE=PoissonRecon.cpp
-SR_SOURCE=SSDRecon.cpp
-ST_SOURCE=SurfaceTrimmer.cpp
-EH_SOURCE=EDTInHeat.cpp
-IS_SOURCE=ImageStitching.cpp
-AV_SOURCE=AdaptiveTreeVisualization.cpp
-CP_SOURCE=ChunkPLY.cpp
+#SR_SOURCE=SSDRecon.cpp
+#ST_SOURCE=SurfaceTrimmer.cpp
+#EH_SOURCE=EDTInHeat.cpp
+#IS_SOURCE=ImageStitching.cpp
+#AV_SOURCE=AdaptiveTreeVisualization.cpp
+#CP_SOURCE=ChunkPLY.cpp
 
 COMPILER = gcc
 #COMPILER = clang
@@ -171,3 +171,4 @@ $(BIN)%.o: $(SRC)%.c
 $(BIN)%.o: $(SRC)%.cpp
 	$(CXX) -c -o $@ $(CFLAGS) -I$(INCLUDE) $<
 
+# 
